@@ -6,7 +6,12 @@ public class SantaControl {
 	
     private ArrayList<Child> goodList;
     private ArrayList<Child> naughtyList;
-
+	
+	/**
+	 * Metodo constructor de la clase SantaControl
+	 *crea las ArrayList de niños
+	
+	 */
     public SantaControl() {
         goodList = new ArrayList<Child>();
         naughtyList = new ArrayList<Child>();
@@ -28,7 +33,16 @@ public class SantaControl {
     public void setNaughtyList(ArrayList<Child> naughtyList) {
         this.naughtyList = naughtyList;
     }
-
+	/**
+	 *crea los niños en la lista correspondiente
+	 @param option de tipo int
+	 @param name de tipo String
+	 @param address de tipo String
+	 @param city de tipo String
+	 @param country de tipo String
+	 @param christmasWish de tipo String
+	 @param age de tipo int
+	 */
     public String createChild(int option, String name, String address, String city, String country, String christmasWish,int age) {
 			
             String out = "";
@@ -69,7 +83,10 @@ public class SantaControl {
 
         return out;
     }
-
+	/**
+	*Permite cambiar de lista a un niños
+	@param name de tipo String
+	*/
     public String changeList(String name) {
        
 		String out = "";
@@ -103,7 +120,9 @@ public class SantaControl {
 
         return out;
     }
-
+	/**
+	*Permite ordenar de forma ascendente los niños segun su edad
+	*/
     public void orderAge(ArrayList<Child> list, Child child) {
 
         for (int i = list.size(); i > 0; i--) {
