@@ -9,7 +9,17 @@ public class Child implements Comparable<Child>{
     private String christmasWish;
     private int age;
 
-	
+	/**
+	*Metodo constructor de la clase Child
+	*permite crear un nuevo niño
+	 @param option de tipo int
+	 @param name de tipo String
+	 @param address de tipo String
+	 @param city de tipo String
+	 @param country de tipo String
+	 @param christmasWish de tipo String
+	 @param age de tipo int
+	*/
     public Child(String name, String address, String city, String country, String christmasWish, int age) {
 
         this.name = name;
@@ -80,14 +90,20 @@ public class Child implements Comparable<Child>{
         this.age = newAge;
     }
 
-
+	/**
+	*permite comparar las edades de los niños
+	@param i de tipo Child
+	@return numero positivo, es mayor
+	 0 si son iguales
+	 numero negativo, es menor
+	*/
     @Override
     public int compareTo(Child i) {
 
         int out= getAge()-i.getAge();
         // Si retorna un numero positivo es mayor
         //Si retorna 0 son iguales
-        //Si retorna un numeor negativo es menor
+        //Si retorna un numero negativo es menor
       
         if(out>0){
             return 1;

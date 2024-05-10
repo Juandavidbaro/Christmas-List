@@ -27,7 +27,10 @@ public class MainChristmas {
 		} while (option != 5);
 
 	}
-
+	/**
+	*Despliega un menu principal al usuario
+	@return option de tipo int 	
+	*/
 	private int showMenu() {
 		int option = 0;
 		System.out.println("What do you want to do?\n"
@@ -40,7 +43,10 @@ public class MainChristmas {
 		option = Integer.parseInt(sc.nextLine());
 		return option;
 	}
-
+	/**
+	*Permite realizar una accion que desea hacer el usuario
+	@param option de tipo int, segun su valor, va a entrar en el switch correspondinete
+	*/
 	private void choice(int option) {
 
 		switch (option) {
@@ -65,7 +71,10 @@ public class MainChristmas {
 
 		}
 	}
-
+	/**
+	*Permite mostrar en orden la lista de los niños
+	
+	*/
 	private void orderList() {
 
 		//santaControl.orderList();
@@ -78,7 +87,9 @@ public class MainChristmas {
 		System.out.println(santaControl.getGoodList());
 
 	}
-
+	/**
+	*Permite cambiar a un niño de una lista a otra
+	*/
 	private void changeList() {
 		System.out.println("Write the name of child");
 		String  name=sc.nextLine();
@@ -87,7 +98,10 @@ public class MainChristmas {
 		
 
 	}
-
+	/**
+	*Permite mostrar los niños de la lista correspondiente
+	
+	*/
 	private void showList() {
 		System.out.println("Enter the corresponding number");
 		System.out.println("(1) If is a good child\n(2) If is naughty child");
@@ -101,7 +115,10 @@ public class MainChristmas {
 			System.out.println("Error");
 		}
 	}
-
+	/**
+	*Permite crear un nuevo niño, ingresando los datos correspondientes
+	
+	*/
 	private void createChild() {
 		
 		//String name, String address, String city, String country, String wish, int age
